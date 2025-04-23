@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Survivors 🔥 Play Now - Ultimate 2025 Survival Game</title>
+    <meta name="description" content="The #1 monster battle royale of 2025! Join 10M+ players in epic survival combat. Play instantly - no downloads!">
+    <link rel="canonical" href="https://monstersurvivors.tattoo">
+    
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;700&display=swap');
+    :root { --primary: #FF2D55; --secondary: #5856D6; }
+    .hero-title {
+        font-size: 4.5rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        letter-spacing: -2px;
+        margin-bottom: 1.5rem;
+    }
+    @media (max-width: 768px) {
+        .hero-title { font-size: 3.5rem; }
+    }
+    .game-wrapper {
+        height: 75vh;
+        min-height: 600px;
+        transition: all 0.3s ease;
+    }
+    .game-wrapper:fullscreen {
+        height: 100vh;
+    }
+    </style>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="antialiased bg-gray-50">
+    <!-- 超大标题区 -->
+    <header class="text-center py-16 px-4 bg-white shadow-md">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="hero-title font-['Bangers'] bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text text-transparent">
+                MONSTER SURVIVORS 2025
+            </h1>
+            <p class="text-2xl text-gray-600 mb-8">
+                🏆 Game of the Year 2025 Edition<br>
+                <span class="text-lg text-purple-600">8.4M+ Daily Battles</span>
+            </p>
+            
+            <!-- 实时玩家计数器 -->
+            <div class="inline-flex items-center bg-gray-100 rounded-full px-8 py-3 mb-8">
+                <span class="w-4 h-4 bg-green-500 rounded-full mr-3 animate-pulse"></span>
+                <span class="font-bold text-xl">4,962</span>
+                <span class="ml-3 text-gray-600 text-lg">LIVE PLAYERS</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 全屏游戏区 -->
+    <main class="max-w-[1920px] mx-auto px-4">
+        <div class="game-wrapper rounded-2xl overflow-hidden border-8 border-white/20 shadow-2xl mb-8">
+            <iframe id="mainGame" 
+                src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"
+                class="w-full h-full"
+                allow="autoplay; fullscreen"
+                title="Monster Survivors 2025 Edition"
+                loading="eager"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- 直接游戏控制 -->
+        <section class="grid md:grid-cols-2 gap-8 mb-20 px-4">
+            <div class="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <h2 class="text-3xl font-bold mb-6 flex items-center">
+                    <span class="mr-3">💥</span>Instant Action
+                </h2>
+                <button onclick="document.getElementById('mainGame').src += '?autoplay=1'" 
+                        class="w-full bg-[var(--primary)] hover:bg-[#FF3750] text-white py-5 rounded-xl text-xl font-bold transition-all transform hover:scale-[1.02] active:scale-95">
+                    PLAY NOW (Instant Match)
+                </button>
+            </div>
+
+            <div class="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <h2 class="text-3xl font-bold mb-6 flex items-center">
+                    <span class="mr-3">🚀</span>Quick Links
+                </h2>
+                <div class="space-y-4">
+                    <button onclick="document.getElementById('mainGame').contentWindow.location.reload()" 
+                            class="w-full bg-gray-100 hover:bg-gray-200 p-4 rounded-lg text-left flex items-center">
+                        <span class="mr-3">🔄</span>Restart Game
+                    </button>
+                    <button onclick="document.getElementById('mainGame').requestFullscreen()" 
+                            class="w-full bg-gray-100 hover:bg-gray-200 p-4 rounded-lg text-left flex items-center">
+                        <span class="mr-3">📺</span>Fullscreen Mode
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 增强版粘性行动栏 -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t shadow-xl">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-yellow-400 rounded-lg animate-pulse flex items-center justify-center">
+                    <span class="text-xl">🎁</span>
+                </div>
+                <div>
+                    <p class="font-bold text-lg">Daily Mega Reward:</p>
+                    <p class="text-sm text-gray-600">Claim within 2h 48m</p>
+                </div>
+            </div>
+            <div class="flex space-x-4">
+                <button onclick="scrollToGame()" 
+                        class="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transition-all flex items-center">
+                    <span class="mr-2">🎮</span>JUMP INTO BATTLE
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function scrollToGame() {
+        document.querySelector('.game-wrapper').scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'center'
+        });
+        // 自动触发游戏启动
+        setTimeout(() => {
+            document.getElementById('mainGame').src += '?autoplay=1';
+        }, 800);
+    }
+    </script>
+</body>
+</html>
