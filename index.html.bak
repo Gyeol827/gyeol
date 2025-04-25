@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5">
+    <title>Monster Survivors - Free Retro Pixel Survival Game | Play Online Now</title>
+    <meta name="description" content="Experience Monster Survivors, the addictive retro pixel survival game where you battle endless waves of monsters. Unlock 36 unique abilities, defeat epic bosses, and compete for high scores. Play free online instantly with no download required!">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'game-neongreen': '#34C759',
+                        'game-darkgreen': '#1A7F37',
+                        'game-darkbg': '#192B21',
+                        'game-lightbg': '#243D30',
+                        'game-purple': '#BF5AF2',
+                        'game-orange': '#FF9500',
+                        'game-yellow': '#FFD60A'
+                    },
+                    fontFamily: {
+                        'pixel': ['"Press Start 2P"', 'cursive'],
+                        'game': ['"Chakra Petch"', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+
+    <!-- 加载关键样式 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Chakra+Petch:wght@400;600;700&display=swap&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <style>
+        body {
+            background-color: #192B21;
+            color: #ffffff;
+            font-family: 'Chakra Petch', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .text-shadow-green {
+            text-shadow: 0 0 10px rgba(52, 199, 89, 0.7);
+        }
+        .pixel-border {
+            border: 4px solid #34C759;
+            box-shadow: 0 0 0 2px #000, 0 6px 0 #1A7F37;
+        }
+    </style>
+</head>
+<body class="font-game text-white">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Page skeleton screen -->
+    <div id="page-skeleton" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #192B21; z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 15vh;">
+        <div class="skeleton" style="width: 200px; height: 200px; border-radius: 10px; margin-bottom: 20px;"></div>
+        <div class="skeleton" style="width: 260px; height: 40px; border-radius: 4px; margin-bottom: 15px;"></div>
+        <div class="skeleton" style="width: 300px; height: 20px; border-radius: 4px; margin-bottom: 30px;"></div>
+        <div class="skeleton" style="width: 150px; height: 50px; border-radius: 8px;"></div>
+    </div>
+
+    <div class="container mx-auto px-4 py-8 max-w-6xl" style="opacity: 0; transition: opacity 0.3s ease-in;">
+        <!-- 主要内容区域 -->
+        <main id="main-content">
+            <!-- Hero Header Section -->
+            <header class="text-center mb-12 animate__animated animate__fadeIn">
+                <div class="flex justify-center mb-6 relative">
+                    <div class="absolute -top-10 -left-10 w-16 h-16 bg-game-yellow rounded-full opacity-50 animate__animated animate__pulse animate__infinite animate__slow" aria-hidden="true"></div>
+                    <div class="absolute -bottom-6 -right-6 w-12 h-12 bg-game-purple rounded-full opacity-40 animate__animated animate__pulse animate__infinite animate__slow" aria-hidden="true"></div>
+                    <div class="pixel-sprite">
+                        <img src="images/2.webp" alt="Monster Survivors Retro Pixel Game" class="w-64 md:w-96 h-64 object-cover pixelated pixel-enhanced relative z-10" width="380" height="250" fetchpriority="high">
+                    </div>
+                </div>
+                
+                <h1 class="font-pixel text-3xl md:text-5xl text-game-neongreen mb-6 tracking-wider text-shadow-green hero-title">MONSTER SURVIVORS</h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 hero-description">Survive the endless onslaught of creatures in this thrilling <span class="text-game-yellow">retro pixel adventure</span>!</p>
+                
+                <!-- Live player count -->
+                <div class="bg-game-darkbg inline-block px-4 py-2 rounded-md mb-6 pixel-border hover:shadow-lg transition-all duration-300">
+                    <p class="text-game-yellow font-pixel"><span id="player-count" class="text-game-neongreen font-bold">2,472</span> Players Online Now!</p>
+                    <div class="flex items-center justify-center mt-1">
+                        <div class="w-2 h-2 bg-game-neongreen rounded-full mr-1 animate__animated animate__pulse animate__infinite"></div>
+                        <span class="text-xs text-gray-400">Live Updates</span>
+                    </div>
+                </div>
+
+                <div class="flex justify-center">
+                    <a href="#play-now" class="pulse-button bg-game-purple hover:bg-purple-600 text-white font-bold py-3 px-8 rounded-md text-xl md:text-2xl shadow-lg transition-all duration-300 pixel-border hover:shadow-xl">PLAY NOW</a>
+                </div>
+                <p class="mt-6 text-gray-400">Join <span class="font-bold text-game-neongreen">50,000+</span> players in this addictive <span class="text-white">free pixel survival game</span>!</p>
+            </header>
+
+            <!-- Game Iframe Section -->
+            <section id="play-now" class="mb-16">
+                <div class="relative">
+                    <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-game-purple text-white px-6 py-2 rounded-md font-bold z-10 pixel-border hover:bg-purple-600 transition-all duration-300">
+                        START GAME ▼
+                    </div>
+                    <div id="game-container" class="w-full h-[500px] md:h-[600px] bg-game-darkbg rounded-md overflow-hidden shadow-xl pixel-border flex items-center justify-center p-4 border-4 border-game-neongreen">
+                        <div id="game-placeholder" class="text-center">
+                            <p class="text-white text-2xl mb-6 font-pixel text-shadow-green">Get Ready For Adventure!</p>
+                            <button id="load-game-btn" class="pulse-button bg-game-neongreen hover:bg-green-500 text-game-darkbg font-bold py-3 px-8 rounded-md text-xl shadow-lg transition-all duration-300 hover:shadow-xl">
+                                PLAY NOW
+                            </button>
+                        </div>
+                        <!-- iframe will be inserted here via JavaScript -->
+                    </div>
+                </div>
+                <p class="text-center mt-4 text-sm text-gray-400">Game not loading? <a href="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" target="_blank" class="text-game-neongreen hover:underline">Open in new window</a></p>
+                
+                <!-- Game Control Buttons Area -->
+                <div class="flex justify-center mt-6 space-x-4">
+                    <button id="fullscreen-btn" class="bg-game-darkgreen hover:bg-green-800 text-white font-bold py-2 px-8 rounded-md shadow-md transition-all duration-300 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 1v4m0 0h-4m4 0l-5-5" />
+                        </svg>
+                        Fullscreen
+                    </button>
+                    <button id="share-btn" onclick="shareGame()" class="bg-game-orange hover:bg-yellow-600 text-white font-bold py-2 px-8 rounded-md shadow-md transition-all duration-300 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                        </svg>
+                        Share Game
+                    </button>
+                </div>
+            </section>
+
+            <!-- Game Description -->
+            <section class="mb-12">
+                <div class="pixel-border p-1 bg-game-darkbg">
+                    <div class="bg-game-lightbg p-6">
+                        <h2 class="text-2xl md:text-3xl font-bold text-game-neongreen mb-4 font-pixel">ABOUT MONSTER SURVIVORS</h2>
+                        <div class="text-gray-200 space-y-4">
+                            <p class="text-lg">Monster Survivors is the <span class="font-bold text-game-orange">most addictive</span> retro pixel survival game where you battle against waves of increasingly difficult monsters. Play this free online game instantly in your browser with no download required!</p>
+                            <p>As you progress through this pixel art game, you'll unlock powerful abilities, collect valuable items, and discover new strategies to overcome the challenging hordes of creatures that stand in your way.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // 页面加载完成后显示内容
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                const skeleton = document.getElementById('page-skeleton');
+                if (skeleton) {
+                    skeleton.style.opacity = '0';
+                    setTimeout(() => {
+                        skeleton.style.display = 'none';
+                        document.querySelector('.container').style.opacity = '1';
+                    }, 300);
+                }
+            }, 800);
+            
+            // 分享功能
+            window.shareGame = function() {
+                alert('分享功能已触发');
+                // 这里可以实现实际的分享功能
+            };
+        });
+    </script>
+</body>
+</html>

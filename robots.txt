@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+Sitemap: https://monstersurvivors.com/sitemap.xml
+
+# Allow crawling of all content
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Crawl delay for bots to avoid overloading server
+User-agent: *
+Crawl-delay: 1 

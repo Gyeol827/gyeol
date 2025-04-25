@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5">
+    <title>Monster Survivors 游戏攻略博客 - 像素生存游戏tips</title>
+    <meta name="description" content="探索Monster Survivors游戏攻略、角色指南、生存技巧和策略。了解如何击败BOSS、获取最佳能力组合，以及延长你的生存时间。">
+    <link rel="canonical" href="https://monstersurvivors.com/blog/">
+    <meta property="og:title" content="Monster Survivors 游戏攻略与秘籍">
+    <meta property="og:description" content="获取Monster Survivors最新游戏攻略、专业技巧、角色指南和游戏更新信息，提升你的生存技能。">
+    <meta property="og:url" content="https://monstersurvivors.com/blog/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://monstersurvivors.com/images/blog-cover.jpg">
+    <meta name="keywords" content="Monster Survivors攻略, 像素生存游戏技巧, roguelike游戏指南, 生存游戏策略, 怎么打boss, 最佳技能组合, 游戏新手指南">
+    <meta name="theme-color" content="#34C759">
+    
+    <!-- PWA支持 -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/icon-192.png">
+    
+    <!-- 预连接到关键资源 -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- 引入字体 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Chakra+Petch:wght@400;600;700&display=swap">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'game-darkbg': '#192B21',
+                        'game-darkhover': '#243C2F',
+                        'game-neongreen': '#34C759',
+                        'game-lightgreen': '#4AFF8F'
+                    },
+                    fontFamily: {
+                        'pixel': ['"Press Start 2P"', 'cursive'],
+                        'game': ['"Chakra Petch"', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    
+    <style>
+        body {
+            background-color: #192B21;
+            background-image: 
+                linear-gradient(rgba(30, 80, 50, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(30, 80, 50, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            font-family: 'Chakra Petch', sans-serif;
+            color: #ffffff;
+        }
+        
+        .post-card {
+            transition: all 0.3s ease;
+        }
+        
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .dark-mode body {
+            background-color: #101C16;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- 导航栏 -->
+    <header class="bg-game-darkbg bg-opacity-90 sticky top-0 z-40 border-b border-game-neongreen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center">
+                        <img src="/images/logo.png" alt="Monster Survivors Logo" class="h-10 mr-2">
+                        <span class="font-pixel text-xl hidden sm:block">Monster Survivors</span>
+                    </a>
+                </div>
+                <nav class="flex space-x-4">
+                    <a href="/" class="text-white hover:text-game-neongreen transition-colors">游戏</a>
+                    <a href="/blog/" class="text-game-neongreen border-b-2 border-game-neongreen">攻略博客</a>
+                    <a href="/leaderboards/" class="text-white hover:text-game-neongreen transition-colors">排行榜</a>
+                    <a href="/updates/" class="text-white hover:text-game-neongreen transition-colors">更新日志</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- 博客头部 -->
+    <section class="relative py-16 overflow-hidden">
+        <div class="absolute inset-0 blur opacity-30 -z-10">
+            <img src="/images/1.jpg" alt="" class="w-full h-full object-cover">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <h1 class="text-4xl md:text-5xl font-bold text-game-neongreen text-center font-pixel mb-6">游戏攻略 & 秘籍</h1>
+            <p class="text-center text-xl max-w-3xl mx-auto mb-10">探索Monster Survivors的游戏技巧、策略和秘密，成为像素生存游戏的大师。</p>
+            
+            <!-- 博客搜索栏 -->
+            <div class="max-w-xl mx-auto">
+                <form class="relative">
+                    <input type="text" placeholder="搜索攻略、技巧或角色..." class="w-full px-5 py-3 rounded-full bg-black bg-opacity-50 border-2 border-game-neongreen text-white focus:outline-none focus:ring-2 focus:ring-game-lightgreen">
+                    <button type="submit" class="absolute right-2 top-2 bg-game-neongreen text-game-darkbg p-2 rounded-full hover:bg-green-400 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 精选文章 -->
+    <section class="py-12 bg-black bg-opacity-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold text-game-neongreen">精选攻略</h2>
+                <a href="/blog/category/featured/" class="text-game-neongreen hover:text-green-400 transition-colors">查看全部 →</a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 文章1 -->
+                <article class="post-card bg-game-darkbg rounded-lg overflow-hidden border border-gray-800 hover:border-game-neongreen">
+                    <a href="/blog/beginners-guide/">
+                        <img src="/images/blog-1.jpg" alt="新手指南封面" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex space-x-2 mb-3">
+                                <span class="px-2 py-1 bg-game-neongreen text-game-darkbg text-xs rounded-full">新手指南</span>
+                                <span class="px-2 py-1 bg-gray-800 text-white text-xs rounded-full">基础技巧</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-white">Monster Survivors新手入门指南</h3>
+                            <p class="text-gray-400 mb-4 line-clamp-3">从零开始学习Monster Survivors的基础操作、角色选择和生存技巧，帮助你在游戏中存活更久。</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <span>5分钟阅读</span>
+                                <span class="mx-2">•</span>
+                                <span>3天前</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <!-- 文章2 -->
+                <article class="post-card bg-game-darkbg rounded-lg overflow-hidden border border-gray-800 hover:border-game-neongreen">
+                    <a href="/blog/best-ability-combinations/">
+                        <img src="/images/blog-2.jpg" alt="最佳能力组合封面" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex space-x-2 mb-3">
+                                <span class="px-2 py-1 bg-game-neongreen text-game-darkbg text-xs rounded-full">进阶攻略</span>
+                                <span class="px-2 py-1 bg-gray-800 text-white text-xs rounded-full">能力技巧</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-white">2023最强能力组合推荐</h3>
+                            <p class="text-gray-400 mb-4 line-clamp-3">详细分析游戏中36种能力的优缺点，推荐10种最强组合搭配，让你轻松应对各种敌人和BOSS。</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <span>8分钟阅读</span>
+                                <span class="mx-2">•</span>
+                                <span>1周前</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <!-- 文章3 -->
+                <article class="post-card bg-game-darkbg rounded-lg overflow-hidden border border-gray-800 hover:border-game-neongreen">
+                    <a href="/blog/boss-strategy-guide/">
+                        <img src="/images/blog-3.jpg" alt="BOSS攻略封面" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex space-x-2 mb-3">
+                                <span class="px-2 py-1 bg-game-neongreen text-game-darkbg text-xs rounded-full">BOSS攻略</span>
+                                <span class="px-2 py-1 bg-gray-800 text-white text-xs rounded-full">战斗技巧</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-white">如何击败所有BOSS：完全攻略</h3>
+                            <p class="text-gray-400 mb-4 line-clamp-3">详解游戏中所有BOSS的弱点、攻击模式和战斗策略，帮助你轻松击败这些强大的敌人。</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <span>12分钟阅读</span>
+                                <span class="mx-2">•</span>
+                                <span>2周前</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最新文章 -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold text-game-neongreen">最新攻略</h2>
+                <a href="/blog/category/latest/" class="text-game-neongreen hover:text-green-400 transition-colors">查看全部 →</a>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-8">
+                <!-- 文章1 -->
+                <article class="flex flex-col md:flex-row bg-game-darkbg rounded-lg overflow-hidden border border-gray-800 hover:border-game-neongreen post-card">
+                    <div class="md:w-1/3 h-60 md:h-auto">
+                        <img src="/images/blog-4.jpg" alt="如何解锁隐藏角色封面" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 md:w-2/3">
+                        <div class="flex space-x-2 mb-3">
+                            <span class="px-2 py-1 bg-game-neongreen text-game-darkbg text-xs rounded-full">秘密攻略</span>
+                            <span class="px-2 py-1 bg-gray-800 text-white text-xs rounded-full">角色解锁</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-white">如何解锁全部5个隐藏角色</h3>
+                        <p class="text-gray-400 mb-4">
+                            Monster Survivors中有5个强大的隐藏角色，本攻略将详细介绍解锁每个角色的具体步骤和要求，包括需要完成的特殊挑战和获取的成就。这些角色各有特色技能，掌握它们将让你的游戏体验更加丰富！
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center text-sm text-gray-500">
+                                <span>10分钟阅读</span>
+                                <span class="mx-2">•</span>
+                                <span>今天发布</span>
+                            </div>
+                            <a href="/blog/unlock-hidden-characters/" class="bg-game-neongreen text-game-darkbg px-4 py-2 rounded-lg hover:bg-green-400 transition-colors">
+                                阅读全文
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- 文章2 -->
+                <article class="flex flex-col md:flex-row bg-game-darkbg rounded-lg overflow-hidden border border-gray-800 hover:border-game-neongreen post-card">
+                    <div class="md:w-1/3 h-60 md:h-auto">
+                        <img src="/images/blog-5.jpg" alt="30分钟生存技巧封面" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 md:w-2/3">
+                        <div class="flex space-x-2 mb-3">
+                            <span class="px-2 py-1 bg-game-neongreen text-game-darkbg text-xs rounded-full">高级技巧</span>
+                            <span class="px-2 py-1 bg-gray-800 text-white text-xs rounded-full">生存策略</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-white">如何在游戏中存活超过30分钟</h3>
+                        <p class="text-gray-400 mb-4">
+                            想要解锁"不灭传说"成就？本攻略将分享专家级玩家的技巧和策略，帮助你在Monster Survivors中存活超过30分钟。包括移动技巧、资源管理、敌人优先级处理以及最适合长时间生存的角色和能力推荐。
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center text-sm text-gray-500">
+                                <span>15分钟阅读</span>
+                                <span class="mx-2">•</span>
+                                <span>2天前</span>
+                            </div>
+                            <a href="/blog/survive-30-minutes/" class="bg-game-neongreen text-game-darkbg px-4 py-2 rounded-lg hover:bg-green-400 transition-colors">
+                                阅读全文
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 文章分类 -->
+    <section class="py-12 bg-black bg-opacity-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-game-neongreen mb-8">攻略分类</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="/blog/category/beginners/" class="bg-game-darkbg rounded-lg p-6 text-center hover:bg-game-darkhover transition-colors border border-gray-800 hover:border-game-neongreen">
+                    <div class="text-3xl mb-2">🏆</div>
+                    <h3 class="font-bold text-white">新手指南</h3>
+                    <p class="text-gray-400 text-sm">12篇文章</p>
+                </a>
+                
+                <a href="/blog/category/characters/" class="bg-game-darkbg rounded-lg p-6 text-center hover:bg-game-darkhover transition-colors border border-gray-800 hover:border-game-neongreen">
+                    <div class="text-3xl mb-2">👤</div>
+                    <h3 class="font-bold text-white">角色攻略</h3>
+                    <p class="text-gray-400 text-sm">8篇文章</p>
+                </a>
+                
+                <a href="/blog/category/abilities/" class="bg-game-darkbg rounded-lg p-6 text-center hover:bg-game-darkhover transition-colors border border-gray-800 hover:border-game-neongreen">
+                    <div class="text-3xl mb-2">⚡</div>
+                    <h3 class="font-bold text-white">能力指南</h3>
+                    <p class="text-gray-400 text-sm">15篇文章</p>
+                </a>
+                
+                <a href="/blog/category/bosses/" class="bg-game-darkbg rounded-lg p-6 text-center hover:bg-game-darkhover transition-colors border border-gray-800 hover:border-game-neongreen">
+                    <div class="text-3xl mb-2">👹</div>
+                    <h3 class="font-bold text-white">BOSS攻略</h3>
+                    <p class="text-gray-400 text-sm">6篇文章</p>
+                </a>
+                
+                <a href="/blog/category/secrets/" class="bg-game-darkbg rounded-lg p-6 text-center hover:bg-game-darkhover transition-colors border border-gray-800 hover:border-game-neongreen">
+                    <div class="text-3xl mb-2">🔍</div>
+                    <h3 class="font-bold text-white">秘密探索</h3>
+                    <p class="text-gray-400 text-sm">9篇文章</p>
+                </a>
+                
+                <a href="/blog/category/achievements/" class="bg-game-darkbg rounded-lg p-6 text-center hover:bg-game-darkhover transition-colors border border-gray-800 hover:border-game-neongreen">
+                    <div class="text-3xl mb-2">🏅</div>
+                    <h3 class="font-bold text-white">成就指南</h3>
+                    <p class="text-gray-400 text-sm">7篇文章</p>
+                </a>
+                
+                <a href="/blog/category/strategies/" class="bg-game-darkbg rounded-lg p-6 text-center hover:bg-game-darkhover transition-colors border border-gray-800 hover:border-game-neongreen">
+                    <div class="text-3xl mb-2">📊</div>
+                    <h3 class="font-bold text-white">战略分析</h3>
+                    <p class="text-gray-400 text-sm">11篇文章</p>
+                </a>
+                
+                <a href="/blog/category/updates/" class="bg-game-darkbg rounded-lg p-6 text-center hover:bg-game-darkhover transition-colors border border-gray-800 hover:border-game-neongreen">
+                    <div class="text-3xl mb-2">🆕</div>
+                    <h3 class="font-bold text-white">更新解析</h3>
+                    <p class="text-gray-400 text-sm">5篇文章</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 订阅区域 -->
+    <section class="py-16">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl font-bold text-game-neongreen mb-4">获取最新攻略和游戏技巧</h2>
+            <p class="text-white mb-8">订阅我们的通讯，获取独家游戏内容、新攻略和秘密技巧，提升你的游戏体验！</p>
+            
+            <form class="flex flex-col sm:flex-row max-w-lg mx-auto">
+                <input type="email" placeholder="输入你的邮箱地址" class="flex-grow px-5 py-3 rounded-l-lg sm:rounded-l-lg sm:rounded-r-none mb-2 sm:mb-0 bg-black bg-opacity-50 border-2 border-game-neongreen text-white focus:outline-none focus:ring-2 focus:ring-game-lightgreen">
+                <button type="submit" class="bg-game-neongreen text-game-darkbg font-bold py-3 px-6 rounded-r-lg sm:rounded-l-none hover:bg-green-400 transition-colors">订阅</button>
+            </form>
+            
+            <p class="text-gray-400 text-sm mt-4">我们尊重你的隐私，绝不会发送垃圾邮件。</p>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-black bg-opacity-50 border-t border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white font-bold mb-4">关于我们</h3>
+                    <p class="text-gray-400 text-sm">Monster Survivors是一款像素风格的生存游戏，由热爱像素艺术和roguelike游戏的开发团队打造。</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="/" class="hover:text-game-neongreen transition-colors">游戏主页</a></li>
+                        <li><a href="/blog/" class="hover:text-game-neongreen transition-colors">攻略博客</a></li>
+                        <li><a href="/leaderboards/" class="hover:text-game-neongreen transition-colors">排行榜</a></li>
+                        <li><a href="/updates/" class="hover:text-game-neongreen transition-colors">更新日志</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold mb-4">博客分类</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="/blog/category/beginners/" class="hover:text-game-neongreen transition-colors">新手指南</a></li>
+                        <li><a href="/blog/category/characters/" class="hover:text-game-neongreen transition-colors">角色攻略</a></li>
+                        <li><a href="/blog/category/bosses/" class="hover:text-game-neongreen transition-colors">BOSS攻略</a></li>
+                        <li><a href="/blog/category/strategies/" class="hover:text-game-neongreen transition-colors">战略分析</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold mb-4">联系我们</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="mailto:info@monstersurvivors.com" class="hover:text-game-neongreen transition-colors">info@monstersurvivors.com</a></li>
+                        <li><a href="https://discord.gg/monstersurvivors" class="hover:text-game-neongreen transition-colors">Discord社区</a></li>
+                        <li><a href="https://twitter.com/MStrSurvivors" class="hover:text-game-neongreen transition-colors">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2023 Monster Survivors. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 侧边栏广告容器 -->
+    <div id="sidebar-ad-container" class="fixed right-0 top-1/4 transform -translate-y-1/2 z-40">
+        <div class="ad-placeholder bg-gray-800 rounded-l-lg overflow-hidden" style="height: 600px; width: 160px;">
+            <div class="flex items-center justify-center h-full text-gray-400 writing-mode-vertical-rl">
+                广告位
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
